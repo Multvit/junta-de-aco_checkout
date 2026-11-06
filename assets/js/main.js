@@ -254,7 +254,7 @@ const CONFIG = {
     // Reveal em cascata por grupo (fora do hero)
     const groups = new Map();
     $$(".rv").filter(el => !el.closest(".hero")).forEach(el => {
-      const g = el.closest(".problem-grid, .ben-grid, .compo-grid, .steps, .kit-grid, .vid-grid, .acc, .proof-grid") || el;
+      const g = el.closest(".problem-grid, .ben-grid, .formula, .steps, .kit-grid, .vid-grid, .acc, .proof-grid") || el;
       if (!groups.has(g)) groups.set(g, []);
       groups.get(g).push(el);
     });
