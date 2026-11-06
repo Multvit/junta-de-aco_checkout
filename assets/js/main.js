@@ -5,9 +5,9 @@
 /* ===================== CONFIGURAÇÃO ===================== */
 const CONFIG = {
   checkout: {
-    3: "https://pagamento.juntadeaco.com.br/checkout/187182633:1",
-    6: "https://pagamento.juntadeaco.com.br/checkout/187183470:1",
-    12: "https://pagamento.juntadeaco.com.br/checkout/188093258:1",
+    1: "https://www.multvit.com.br/produtos/junta-de-aco/",
+    3: "https://www.multvit.com.br/produtos/kit-3-junta-de-aco/",
+    6: "https://www.multvit.com.br/produtos/kit-6-junta-de-aco/",
   },
   whatsapp: "https://wa.me/554498400223?text=" + encodeURIComponent("Olá! Tenho interesse no Junta de Aço e gostaria de tirar algumas dúvidas."),
   // Assistente virtual (n8n). Deixe "" para desligar; aí o botão flutuante do WhatsApp volta a aparecer.
@@ -72,7 +72,7 @@ const CONFIG = {
   $$(".js-buy").forEach(a => {
     const kit = a.dataset.kit;
     a.href = CONFIG.checkout[kit];
-    a.addEventListener("click", () => track("InitiateCheckout", { content_name: `Junta de Aço - ${kit} meses`, content_type: "product", num_items: Number(kit), value: parseFloat(a.dataset.value), currency: "BRL" }));
+    a.addEventListener("click", () => track("ViewContent", { content_name: `Junta de Aço - ${kit} pote(s)`, content_type: "product", value: parseFloat(a.dataset.value), currency: "BRL" }));
   });
   const year = $("#year"); if (year) year.textContent = new Date().getFullYear();
 

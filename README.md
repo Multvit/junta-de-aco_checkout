@@ -23,10 +23,10 @@ Tudo no topo de `assets/js/main.js`:
 
 | Item | Chave |
 |---|---|
-| Links de checkout (3, 6 e 12 meses) | `CONFIG.checkout` |
+| Links dos produtos (1 pote, kit 3 e kit 6) | `CONFIG.checkout` |
 | WhatsApp e mensagem inicial | `CONFIG.whatsapp` |
 | Assistente virtual “João” (n8n). `""` desliga e volta o botão flutuante do WhatsApp | `CONFIG.chatN8n` |
-| Meta Pixel (PageView, Contact, InitiateCheckout, ViewContent) | `CONFIG.metaPixelId` |
+| Meta Pixel (PageView, Contact, ViewContent) | `CONFIG.metaPixelId` |
 | Microsoft Clarity | `CONFIG.clarityId` |
 
 Preços, textos, FAQ e os vídeos de depoimento (atributo `data-yt` com o ID do YouTube) ficam em `index.html`.
@@ -42,4 +42,4 @@ python3 -m http.server 8000
 - `canonical`, `og:url` e `og:image` apontam para `https://juntadeaco.com.br/`. Se o domínio for outro, troque no `<head>` do `index.html`.
 - Meta Pixel e Clarity estão vazios: preencha em `CONFIG` para ativar.
 - Os vídeos de depoimento só carregam o YouTube quando a pessoa clica (a página abre mais rápido).
-- **Cache:** o CSS e o JS são chamados com `?v=3` no `index.html` e nas páginas legais. Sempre que alterar `style.css` ou `main.js`, aumente esse número (`?v=4`, …); ao trocar uma imagem, salve com um nome novo. Assim ninguém fica preso numa versão antiga guardada pelo navegador.
+- **Cache:** o CSS e o JS são chamados com `?v=…` no `index.html` e nas páginas legais. Sempre que alterar `style.css` ou `main.js`, aumente esse número (`?v=4`, …); ao trocar uma imagem, salve com um nome novo. Assim ninguém fica preso numa versão antiga guardada pelo navegador.
