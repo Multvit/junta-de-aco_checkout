@@ -224,7 +224,6 @@ svg use { pointer-events: none; }
 .proof-item { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 44px 16px; text-align: center; }
 .proof-item + .proof-item { border-left: 1px solid var(--line); }
 .proof-item strong { display: inline-flex; align-items: baseline; gap: 6px; font-family: var(--display); font-weight: 620; font-size: clamp(40px, 4.4vw, 58px); line-height: 1; color: var(--violet); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
-.proof-mv strong { color: #009e4a; } /* verde Multvit */
 .proof-item > span { font-size: 14px; color: var(--muted); }
 
 /* ---------- Seção padrão ---------- */

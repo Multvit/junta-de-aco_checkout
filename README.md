@@ -42,3 +42,4 @@ python3 -m http.server 8000
 - `canonical`, `og:url` e `og:image` apontam para `https://juntadeaco.com.br/`. Se o domínio for outro, troque no `<head>` do `index.html`.
 - Meta Pixel e Clarity estão vazios: preencha em `CONFIG` para ativar.
 - Os vídeos de depoimento só carregam o YouTube quando a pessoa clica (a página abre mais rápido).
+- **Cache:** o CSS e o JS são chamados com `?v=3` no `index.html` e nas páginas legais. Sempre que alterar `style.css` ou `main.js`, aumente esse número (`?v=4`, …); ao trocar uma imagem, salve com um nome novo. Assim ninguém fica preso numa versão antiga guardada pelo navegador.
